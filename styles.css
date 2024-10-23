@@ -1,0 +1,262 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8B4513;
+  padding: 15px;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('iimage/spices-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #8B4513;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Spice Sections */
+.spice {
+  padding: 50px;
+  text-align: center;
+}
+
+.spice:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.spice:nth-child(even) {
+  background-color: #f2e2c4;
+}
+
+.spice h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.spice p {
+  font-size: 18px;
+}
+
+/* Spice Products */
+.spice-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.spice-item {
+  flex-basis: 30%;
+  margin: 15px;
+  text-align: center;
+}
+
+.spice-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.spice-item h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.spice-item p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #8B4513;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .spice-item {
+    flex-basis: 45%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .spice-item {
+    flex-basis: 100%;
+  }
+}
+
+#hero {
+  background-image: url('image/bg.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  color: #fff;
+}
+
+/* Add hover and touch effects for the spice images */
+.spice-item img {
+  transition: transform 0.3s ease;
+}
+
+.spice-item img:hover,
+.spice-item img:active {
+  transform: scale(1.1);
+}
+
+/* Cart styles */
+.cart {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f8f8f8;
+  padding: 10px; /* Reduced padding */
+  width: 200px; /* Set a fixed width */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 14px; /* Decreased font size */
+}
+
+.cart h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px; /* Decreased font size */
+}
+
+.cart-items {
+  max-height: 150px; /* Adjusted height */
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px; /* Reduced margin for items */
+}
+
+.cart-item p {
+  margin: 0;
+  font-size: 14px; /* Decreased font size */
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px; /* Decreased font size */
+}
+
+/* Button Styles */
+.btn {
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 5px 10px; /* Adjusted button padding */
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px; /* Decreased button font size */
+}
+
+.btn:hover {
+  background-color: #ff6347;
+}
+
+/* Specific styles for cart buttons */
+.cart-button {
+  font-size: 12px; /* Smaller font size for cart buttons */
+  padding: 5px 8px; /* Smaller padding for cart buttons */
+  margin-top: 5px; /* Spacing above buttons */
+}
